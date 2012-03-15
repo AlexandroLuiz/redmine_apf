@@ -1,0 +1,32 @@
+<% form_for([@project,@functionality]) do |f| %>
+  <%= f.error_messages %>
+
+    <p>
+    <%= f.label :name %>: <br />
+    <%= f.text_field :name, :size => 78  %>
+    </p>
+    <p>
+    <%=t :qnt_tipe_register%>:<br/>
+    <%=f.text_field :qnt_tipe_register%>
+    </p>
+    <p>
+    <%=t :qnt_tipe_data%>:<br/>
+    <%=f.text_field :qnt_tipe_data%>
+    </p>
+    <p>
+    <%=t :tipe_of_function%>:<br/>
+    <%=f.text_field :qnt_pf%>
+    </p>
+
+    <p>
+    <%= f.label :description %>:<br/>
+    <%= f.text_area :description, :rows => 10, :cols => 90%>
+    </p>
+
+
+ <div class="actions">
+    <%= f.submit l(:button_save)%>
+ </div>
+
+<% end %>
+

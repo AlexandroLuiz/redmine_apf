@@ -1,0 +1,19 @@
+
+   <p>
+    <%= f.text_field :name, :size => 78, :required => true  %>
+   </p>
+   <p>
+    <%=f.text_field :qnt_type_register, :size => 5, :required => true%>
+    </p>
+    <p>
+     <%=f.text_field :qnt_type_data, :size => 5, :required => true%>
+    </p>
+    <p>
+        <%=f.select :type_of_functionality_id, functionalities_types_for_select, :required => true%>
+    </p>
+
+    <p>
+       <%= f.text_area :description, :rows => 10, :cols => 90%>
+    </p>
+<%=wikitoolbar_for 'functionality_data_type_description'%>
+

@@ -1,0 +1,4 @@
+class ConfigurationApfForDataType < ConfigurationApfForFunctionality
+
+end
+

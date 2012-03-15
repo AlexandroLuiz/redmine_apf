@@ -1,0 +1,7 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  qnt_reference_file: 1
+two:
+  id: 2
+  qnt_reference_file: 1

@@ -1,0 +1,15 @@
+<%=render "configuration_apf_for_data_types/nav"%>
+<div id="conteudo">
+<h2><%=l(:edit_functionality_data_type)%></h2>
+
+<% labelled_tabular_form_for :functionality_data_type, @functionality_data_type, :url => {:controller => 'functionality_data_types', :action => 'update', :project_id => @project},
+                             :html => {:multipart => true, :method => :put, :id => 'functionality_data_type-form', :class => 'tabular edit-functionality_data_type-form'} do |f| %>
+    <%= error_messages_for 'functionality_data_type' %>
+
+<div id="form">
+<%=render :partial => "form", :locals => {:f => f}%>
+    <%= f.submit l(:button_save)%>
+<% end %>
+</div>
+</div>
+

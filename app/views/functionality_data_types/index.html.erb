@@ -1,0 +1,31 @@
+<%=render "configuration_apf_for_data_types/nav"%>
+<div id="conteudo">
+<div class="contextual"><%=link_to_if_authorized(l(:button_add), {:controller => :functionality_data_types, :action => :new, :project_id => @project}, :class => 'icon icon-add')%></div>
+
+<h2><%=l :functionalities_data_type%></h2>
+<div class="autoscroll">
+<table>
+  <tr>
+    <th><%=t "name" %></th>
+    <th><%=t :type%></th>
+    <th><%=t :qnt_type_register%></th>
+    <th><%=t :qnt_type_data%></th>
+    <th><%=t :qnt_pf%></th>
+    <th><%=t("actions")%></th>
+   </tr>
+   <% @functionality_data_types.each do |functionality| %>
+  <tr>
+    <td><%= link_to functionality.name, {:controller => :functionality_data_types, :action => :show, :project_id => @project, :id => functionality} %></td>
+    <td><%= functionality.type_of_functionality.name %></td>
+    <td><%= functionality.qnt_type_register%></td>
+    <td><%= functionality.qnt_type_data%></td>
+    <td><%= qnt_pf_by_functionality functionality.type_of_functionality.name, functionality.qnt_type_register, functionality.qnt_type_data%></td>
+    <td> <%= link_to_edit({:controller => 'functionality_data_types', :action => 'edit', :project_id => @project, :id => functionality}, :accesskey => accesskey(:edit), :class => 'icon icon-edit') %>
+    <%= link_to_destroy({:controller => 'functionality_data_types', :action => 'destroy', :id => functionality}, :confirm => t(:confirm), :method => :delete, :class => "icon icon-del") %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<p class="pagination"><%= pagination_links_full @functionality_data_type_pages, @functionality_data_type_count %></p>
+</div>
+

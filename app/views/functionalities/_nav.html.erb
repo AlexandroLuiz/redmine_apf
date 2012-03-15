@@ -1,0 +1,21 @@
+<% html_title "APF" -%>
+<% content_for :header_tags do %>
+    <%= stylesheet_link_tag 'style', :plugin => 'redmine_apf' %>
+    <%= stylesheet_link_tag 'admin', :plugin => 'redmine_apf' %>
+<% end %>
+
+
+  <div id="navegacaoLocal">
+
+   <div id="navegacaoLocalRequisitos">
+   <h3> <%= link_to_if_authorized(l(:functionalities), {:controller => 'functionalities', :action => 'index' }, :accesskey => accesskey(:index)) %></h3>
+   <p> <%= link_to_list Functionality, {:controller => 'functionalities', :action => 'index' }, :accesskey => accesskey(:index)%></p>
+   <p> <%= link_to_new Functionality, {:controller => 'functionality', :action => 'new' }, :accesskey => accesskey(:new)%></p>
+   </div>
+
+
+   <div id="navegacaoLocalRequisitos">
+
+   </div>
+  </div>
+

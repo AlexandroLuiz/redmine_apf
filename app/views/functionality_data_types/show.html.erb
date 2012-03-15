@@ -1,0 +1,20 @@
+<%=render "configuration_apf_for_data_types/nav"%>
+<div id="conteudo">
+<%=render "action_menu"%>
+
+<h2><%=t "FunctionalityDataType"%></h2>
+
+<div id="show">
+<h3><%=@functionality_data_type.type_of_functionality.name%> - <%=h @functionality_data_type.name %></h3>
+
+
+<p><%=@functionality_data_type.description%></p>
+<p><%=l :qnt_type_register%>:
+<%=@functionality_data_type.qnt_type_register%></p>
+
+<p><%=l :qnt_type_data%>:
+<%=@functionality_data_type.qnt_type_data%></p>
+
+</div>
+</div>
+

@@ -1,0 +1,69 @@
+pt-BR:
+   new_functionality: Nova Funcionalidade
+   functionalities: Funcionalidades
+   functionality: Funcionalidade
+   Functionality: Funcionalidade
+   new_functionality_data_type: Nova Funcionalidade Tipo Dado
+   edit_functionality_data_type: Editar Funcionalidade Tipo Dado
+   edit_functionality_transaction_type: Editar Funcionalidade Tipo Transação
+
+   adjustment_factor: Fator de Ajuste
+   adjustment: Ajustar
+   configure_adjustment_factor_for: "Configurar Nível de Influência para %{factor}"
+
+   general_caracteristics_of_project: Características Gerais do Projeto
+   level_of_influence: Nível de Influência
+
+   new_functionality_transaction_type: Nova Funcionalidade do Tipo Transação
+
+   field_qnt_type_register: Qnt. Tipos de Registros
+   field_qnt_type_data: Qnt. Tipos de Dados
+   field_type_of_functionality: Tipo de Funcionalidade
+   field_level_of_influence: Nível de Influência
+
+   field_qnt_reference_file: Qnt. Arquivos Refeferenciados
+
+   functionalities_data_type: Funcionalidades Tipo Dado
+   FunctionalityDataType: Funcionalidade Tipo Dado
+   FunctionalityTransactionType: Funcionalidades Tipo Transação
+   functionalities_transaction_type: Funcionalidades Tipo Transação
+
+   list: "Ver todos %{model}"
+   new: "Novo %{model}"
+   edit: "Editar %{model}"
+
+
+   configuration: Configurações
+   list_all: Listar Todas
+   type: Tipo
+   qnt_type_register: Qnt. Tipo Registro
+   qnt_type_data: Qnt. Tipo Dado
+   complexity: Complexidade
+   qnt_pf: Qnt. PF
+   type_of_register: Quantidade Tipo de Registro
+   type_data: Quantidade Tipo de Dados
+   qnt_reference_files: Qnt. Arquivos Referenciados
+
+   type_of_functionality: Tipo de Funcionalidade
+
+   tipe_of_function: Tipo de Funcão
+   configuration_apf_for_data_types: Configurações para Funcionalidade Tipo Dado
+   configuration_apf_for_transaction_types: Configurações para Funcionalidades Tipo Transação
+
+   permission_view_configuration_apf_for_data_type: Ver Configurações APF para Funções do Tipo Dado
+   permission_edit_configuration_apf_for_data_type: Editar Configurações APF para Funções do Tipo Dado
+   permission_view_configuration_apf_for_transaction_type: Ver Configurações APF para Funções do Tipo Transação
+   permission_edit_configuration_apf_for_transaction_type: Editar Configurações APF para Funções do Tipo Transação
+   permission_view_functionalitiesaplication_apf: Ver funcionalidades e aplicar APF
+   permission_create_edit_functionality: Criar e editar funcionalidade
+   permission_destroy_functionality: Excluir funcionalidade
+   permission_view_functionalities_and_aplication_apf: Ver funcionalidades e aplicar APF
+   permission_create_and_update_functionality_data_type: Criar e Atualizar Funcionalidade do Tipo Dado
+   permission_view_functionalities_data_type: Ver Funcionalidades do Tipo Dados
+   permission_create_and_update_functionality_transaction_type: Criar e Atualizar Funções do Tipo Transação
+   permission_view_functionalities_transaction_type: Ver Funcionalidades do Tipo Transação
+   permission_destroy_functionalities_transaction_type: Excluir Funcionalidades do Tipo Transação
+   permission_destroy_functionalities_data_type: Excluir Funcionalidades do Tipo Dado
+   permission_configure_adjustment_factor: Configurar Fator de Ajuste
+   permission_view_configuration_adjustment_factor: Ver Configurações de Fator de Ajuste
+

@@ -1,0 +1,15 @@
+<%=render "configuration_apf_for_data_types/nav"%>
+<div id="conteudo">
+<h2><%=l(:new_functionality_transaction_type)%></h2>
+
+<% labelled_tabular_form_for :functionality_transaction_type, @functionality_transaction_type, :url => {:controller => 'functionality_transaction_types', :action => 'create', :project_id => @project},
+                             :html => {:multipart => true, :id => 'functionality_transaction_type-form', :class => 'tabular new-functionality_transaction_type-form'} do |f| %>
+    <%= error_messages_for 'functionality_transaction_type' %>
+
+<div id="form">
+<%=render :partial => "form", :locals => {:f => f}%>
+    <%= f.submit l(:button_save)%>
+<% end %>
+</div>
+</div>
+

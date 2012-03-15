@@ -1,0 +1,29 @@
+
+
+<%=render "configuration_apf_for_data_types/nav"%>
+<div id="conteudo">
+<h2><%=l :configuration_apf_for_transaction_types%></h2>
+<table>
+  <tr>
+    <th><%=t :type%></th>
+    <th><%=t :qnt_reference_files%></th>
+    <th><%=t :qnt_type_data%></th>
+    <th><%=t :complexity%></th>
+    <th><%=t :qnt_pf%></th>
+    <th></th>
+    </tr>
+
+   <% @configuration_apf_for_transaction_types.each do |conf| %>
+  <tr>
+
+    <td><%= conf.type_of_functionality.name %></td>
+    <td><%= conf.type_of_reference_file_min%> - <%= conf.type_of_reference_file_max%></td>
+    <td><%= conf.type_of_data_min%> - <%=  conf.type_of_data_max%></td>
+    <td><%= conf.complexity%></td>
+    <td><%= conf.pf%></td>
+    <td><%= link_to_edit({:controller => :configuration_apf_for_transaction_types, :action => :edit, :project_id => @project, :id => conf}, :class => 'icon icon-edit')%></td>
+  </tr>
+<% end %>
+</table>
+<div>
+

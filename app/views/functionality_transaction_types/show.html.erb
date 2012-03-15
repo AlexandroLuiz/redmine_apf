@@ -1,0 +1,20 @@
+<%=render "configuration_apf_for_data_types/nav"%>
+<div id="conteudo">
+<%=render "action_menu"%>
+
+<h2><%=t "FunctionalityTransactionType"%></h2>
+
+<div id="show">
+<h3><%=@functionality_transaction_type.type_of_functionality.name%> - <%=h @functionality_transaction_type.name %></h3>
+
+
+<p><%=@functionality_transaction_type.description%></p>
+<p><%=l :qnt_reference_files%>:
+<%=@functionality_transaction_type.qnt_reference_file%></p>
+
+<p><%=l :qnt_type_data%>:
+<%=@functionality_transaction_type.qnt_type_data%></p>
+
+</div>
+</div>
+

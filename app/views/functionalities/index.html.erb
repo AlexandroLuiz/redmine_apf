@@ -1,0 +1,30 @@
+<%=render "nav"%>
+<div id="conteudo">
+<div class="contextual"><%=link_to_if_authorized(l(:button_add), {:controller => :functionalities, :action => :new, :project_id => @project}, :class => 'icon icon-add')%></div>
+
+<h2><%=l :functionalities%></h2>
+<table>
+  <tr>
+    <th><%=t "name" %></th>
+    <th><%=t :tipe%></th>
+    <th><%=t :qnt_tipe_register%></th>
+    <th><%=t :qnt_tipe_data%></th>
+    <th><%=t :qnt_pf%></th>
+    <th><%=t("actions")%></th>
+   </tr>
+
+   <% @functionalities.each do |functionality| %>
+  <tr>
+
+    <td><%= link_to functionality.name, {:controller => :functionalities, :action => :show, :project_id => @project_id, :id => functionality} %></td>
+    <td><%= functionality.tipe %></td>
+    <td><%= functionality.qnt_tipe_register%></td>
+    <td><%= functionality.qnt_tipe_data%></td>
+    <td><%= functionality.qnt_tipe%></td>
+    <td> <%= link_to_edit({:controller => 'functionalities', :action => 'edit', :project_id => @project, :id => functionality}, :accesskey => accesskey(:edit), :class => 'icon icon-edit') %>
+    <%= link_to_destroy({:controller => 'functionalities', :action => 'destroy', :id => functionality}, :confirm => t(:confirm), :method => :delete, :class => "icon icon-del") %></td>
+  </tr>
+<% end %>
+</table>
+<div>
+

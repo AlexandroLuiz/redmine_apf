@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+  id: 1
+  type_of_data_min: 1
+  type_of_data_max: 1
+  complexity: MyString
+  pf: 1
+  type_of_functionality: 
+two:
+  id: 2
+  type_of_data_min: 1
+  type_of_data_max: 1
+  complexity: MyString
+  pf: 1
+  type_of_functionality: 

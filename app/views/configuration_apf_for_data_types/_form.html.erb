@@ -1,0 +1,34 @@
+<% form_for([@project,@configuration_apf_for_data_type]) do |f| %>
+  <%= f.error_messages %>
+
+    <p>
+     <h3><%=@configuration_apf_for_data_type.type_of_functionality.name %></h3>
+
+     <%=f.hidden_field :type_of_functionality_id, :value => @configuration_apf_for_data_type.type_of_functionality.id %>
+
+    </p>
+
+    <p>
+    <%=t :qnt_type_register%>:<br/>
+    <%=f.text_field :type_of_register_min, :size => 3%> - <%=f.text_field :type_of_register_max, :size => 3%>
+    </p>
+    <p>
+    <%=t :qnt_type_data%>:<br/>
+    <%=f.text_field :type_of_data_min, :size => 3%> - <%=f.text_field :type_of_data_max, :size => 3%>
+    </p>
+
+    <p>
+    <%= f.label :complexity %>:<br/>
+    <%= f.text_field :complexity, :size => 10%>
+    </p>
+
+    <p>
+    <%=t :qnt_pf%>:<br/>
+    <%=f.text_field :pf, :size => 3%>
+    </p>
+
+    <%= f.submit l(:button_save)%>
+
+
+<% end %>
+

@@ -1,0 +1,7 @@
+<div class="contextual">
+<%= link_to_if_authorized(l(:button_update), {:controller => 'functionality_transaction_types', :action => 'edit', :id => @functionality_transaction_type }, :class => 'icon icon-edit', :accesskey => accesskey(:edit)) %>
+
+<%= link_to_if_authorized l(:button_move), {:controller => 'issue_moves', :action => 'new', :id => @issue}, :class => 'icon icon-move' %>
+<%= link_to_if_authorized l(:button_delete), {:controller => 'functionality_transaction_types', :action => 'destroy', :id => @functionality_transaction_type, :project_id => @project},:method => :delete, :class => 'icon icon-del' %>
+</div>
+
