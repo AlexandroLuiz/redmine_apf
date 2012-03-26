@@ -1,3 +1,28 @@
-= apf
+== APF Plugin 0.1 Beta
 
-Description goes here
+APF Plugin, é um plugin para o gerenciador de projetos Redmine. Desenvolvido com base na técnica Análise de Pontos
+por Função (APF), com a finalidade de auxiliar no processo de medição e estimativa de software, a princípio para projetos de desenvolvimeto.
+
+ Author::	Alexandro Luiz Hilleshein <alexandro_bito@hotmail.com>
+
+ Requires::	Redmine 1.2
+
+ License::	Copyright (c) 2012 Alexandro Luiz Hilleshein. Licença GPL 2.0.
+
+
+== Instalação
+
+A instalação do plugin é muito simples, primeiramente acesse: http://github.com/AlexandroLuiz/redmine_apf e baixe esse plugin, e estando no diretório do Redmine, colocando-o na pasta:
+    "vendor/plugins"
+
+Contudo, como este plugin necessita de algumas tabelas no banco de dados, a partir do diretório de Redmine, deve ser executado o seguinte comando no console:
+    "rake db:migrate_plugins"
+
+A instalação já está pronta, agora basta ativar o módulo. Esta configuração encontra-se em:
+    "Configurações>>Módulos"
+
+== Observações
+
+Este plugin está em fase inicial de desenvolvimeto, por isto sua instalação não é recomendada pelo desenvolvedor.
+Todos estão convidados a contribuirem com o projeto, bastando entrar em contato através do e-mail alexandro_bito@hotmail.com.
+
