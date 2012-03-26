@@ -1,6 +1,7 @@
 
 
-<p><%= f.select :level_of_influence, @level_of_influences %></p>
+<p><%= f.select :level_of_influence_id, LevelOfInfluence.find(:all).collect{|level_of_influence| [level_of_influence.name,level_of_influence.id]} %></p>
 
-<% f.hidden_field :general_caracteristic%>
+<%= f.hidden_field :general_caracteristic_id, :value => @general_caracteristic.id%>
+<%= f.hidden_field :project_id, :value => @project.id%>
 

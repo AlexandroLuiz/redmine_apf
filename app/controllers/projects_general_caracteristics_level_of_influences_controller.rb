@@ -25,6 +25,18 @@ class ProjectsGeneralCaracteristicsLevelOfInfluencesController < ApplicationCont
   end
 
   def create
+     @projects_general_caracteristics_level_of_influence = ProjectsGeneralCaracteristicsLevelOfInfluence.new(params[:projects_general_caracteristics_level_of_influence])
+
+      respond_to do |format|
+      if @projects_general_caracteristics_level_of_influence.save
+        format.html { redirect_to(general_caracteristics_url, :notice => 'Level of influence was successfully created.') }
+        format.xml  { render :xml => @projects_general_caracteristics_level_of_influence, :status => :created, :location => @functional_requirement}
+      else
+        format.html { render :action => "new" }
+        format.xml  { render :xml => @projects_general_caracteristics_level_of_influence.errors, :status => :unprocessable_entity }
+      end
+    end
+
   end
 
   def update

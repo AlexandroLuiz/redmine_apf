@@ -2,7 +2,7 @@
 <div id="conteudo">
 <h2><%=t("configure_adjustment_factor_for", :factor => @general_caracteristic.name)%></h2>
 
-<% labelled_tabular_form_for :projects_general_caracteristics_level_of_influences, @projects_general_caracteristics_level_of_influence, :url => {:controller => 'projects_general_caracteristics_level_of_influences', :action => 'create', :project_id => @project},
+<% labelled_tabular_form_for :projects_general_caracteristics_level_of_influence, @projects_general_caracteristics_level_of_influence, :url => {:controller => 'projects_general_caracteristics_level_of_influences', :action => 'create', :project_id => @project, :general_caracteristic_id => @general_caracteristic},
                              :html => {:multipart => true, :id => 'projects_general_caracteristics_level_of_influences-form', :class => 'tabular new-projects_general_caracteristics_level_of_influences-form'} do |f| %>
     <%= error_messages_for 'projects_general_caracteristics_level_of_influence' %>
 

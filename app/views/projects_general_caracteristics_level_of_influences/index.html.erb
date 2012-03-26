@@ -15,7 +15,7 @@
    <% @general_caracteristics.each do |caracteristc| %>
   <tr>
     <td><%= caracteristc.name%></td>
-    <td><%=  filter_projects_general_caracteristics_level_of_influences(caracteristc.id)%></td>
+    <td><%= filter_projects_general_caracteristics_level_of_influences(caracteristc.id)%></td>
 
     <td> <%= link_to_if_authorized(t("adjustment"), {:controller => 'projects_general_caracteristics_level_of_influences', :action => 'new', :project_id => @project, :id => caracteristc.id}, :accesskey => accesskey(:new), :class => 'icon icon-new') unless filter_level_of_influence(caracteristc.id)%> <%= link_to_edit({:controller => 'projects_general_caracteristics_level_of_influences', :action => 'edit', :project_id => @project, :id => caracteristc.id}, :accesskey => accesskey(:edit), :class => 'icon icon-edit') if filter_level_of_influence(caracteristc.id)%></td>
 
