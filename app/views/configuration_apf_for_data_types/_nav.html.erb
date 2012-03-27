@@ -15,19 +15,19 @@
 
    <div id="navegacaoLocalAPF">
    <h3><%=t :functionalities_data_type%></h3>
-   <p><%= link_to_if_authorized(l(:list_all), {:controller => 'functionality_data_types', :action => 'index', :project_id => @project})%></p>
-   <p> <%= link_to_if_authorized(l(:configuration), {:controller => 'configuration_apf_for_data_types', :action => 'index', :project_id => @project }, :accesskey => accesskey(:index)) %></p>
-   <p><%=link_to_if_authorized(t(:label_new), {:controller => 'functionality_data_types', :action => 'new', :project_id => @project}) %></p>
+   <p><%= link_to_if_authorized(l(:list_all), {:controller => 'functionality_data_types', :action => 'index', :project_id => @project})%> |
+    <%= link_to_if_authorized(l(:configuration), {:controller => 'configuration_apf_for_data_types', :action => 'index', :project_id => @project }, :accesskey => accesskey(:index)) %> |
+   <%=link_to_if_authorized(t(:label_new), {:controller => 'functionality_data_types', :action => 'new', :project_id => @project}) %></p>
    </div>
    <div id="navegacaoLocalAPF">
      <h3><%=t :functionalities_transaction_type%></h3>
-     <p><%= link_to_if_authorized(l(:list_all), {:controller => 'functionality_transaction_types', :action => 'index', :project_id => @project})%></p>
-   <p> <%= link_to_if_authorized(l(:configuration), {:controller => 'configuration_apf_for_transaction_types', :action => 'index', :project_id => @project }, :accesskey => accesskey(:index)) %></p>
-   <p><%=link_to_if_authorized(t(:label_new), {:controller => 'functionality_transaction_types', :action => 'new', :project_id => @project}) %></p>
+     <p><%= link_to_if_authorized(l(:list_all), {:controller => 'functionality_transaction_types', :action => 'index', :project_id => @project})%> |
+    <%= link_to_if_authorized(l(:configuration), {:controller => 'configuration_apf_for_transaction_types', :action => 'index', :project_id => @project }, :accesskey => accesskey(:index)) %> |
+   <%=link_to_if_authorized(t(:label_new), {:controller => 'functionality_transaction_types', :action => 'new', :project_id => @project}) %></p>
    </div>
     <div id="navegacaoLocalAPF">
     <h3><%=t :adjustment_factor%></h3>
-    <p><%= link_to_if_authorized(l(:list_all), {:controller => 'projects_general_caracteristics_level_of_influences', :action => 'index', :project_id => @project})%></p>
+    <p><%= link_to_if_authorized(l(:configuration), {:controller => 'projects_general_caracteristics_level_of_influences', :action => 'index', :project_id => @project})%></p>
     </div>
   </div>
 

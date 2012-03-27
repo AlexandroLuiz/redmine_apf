@@ -29,7 +29,7 @@ class ProjectsGeneralCaracteristicsLevelOfInfluencesController < ApplicationCont
 
       respond_to do |format|
       if @projects_general_caracteristics_level_of_influence.save
-        format.html { redirect_to(general_caracteristics_url, :notice => 'Level of influence was successfully created.') }
+        format.html { redirect_to(project_projects_general_caracteristics_level_of_influences_url, :notice => 'Level of influence was successfully created.') }
         format.xml  { render :xml => @projects_general_caracteristics_level_of_influence, :status => :created, :location => @functional_requirement}
       else
         format.html { render :action => "new" }
