@@ -15,7 +15,7 @@ por Função (APF), com a finalidade de auxiliar no processo de medição e esti
 A instalação do plugin é muito simples, primeiramente acesse: http://github.com/AlexandroLuiz/redmine_apf e baixe esse plugin, e estando no diretório do Redmine, colocando-o na pasta:
     "vendor/plugins"
 
-Contudo, como este plugin necessita de algumas tabelas no banco de dados, a partir do diretório de Redmine, deve ser executado o seguinte comando no console:
+Como este plugin necessita de algumas tabelas no banco de dados, a partir do diretório de Redmine, deve ser executado o seguinte comando no console:
     "rake db:migrate_plugins"
 
 A instalação já está pronta, agora basta ativar o módulo. Esta configuração encontra-se em:

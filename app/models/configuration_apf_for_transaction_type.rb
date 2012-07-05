@@ -1,4 +1,6 @@
 class ConfigurationApfForTransactionType < ConfigurationApfForFunctionality
 
+
+
 end
 

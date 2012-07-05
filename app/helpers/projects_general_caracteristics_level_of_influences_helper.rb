@@ -23,15 +23,6 @@ module ProjectsGeneralCaracteristicsLevelOfInfluencesHelper
   end
 
 
-  def calc_ajustment_factor
-     @projects_general_caracteristics_level_of_influences = ProjectsGeneralCaracteristicsLevelOfInfluence.find_all_by_project_id(@project.id)
-     acum = 0
-     @projects_general_caracteristics_level_of_influences.each do |p|
-     acum += p.level_of_influence.level
-     end
-     vaf = (acum * 0.01) + 0.65
-     dfp = total_pf * vaf
-     dfp
-  end
+
 end
 

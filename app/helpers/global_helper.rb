@@ -15,7 +15,6 @@ module GlobalHelper
   def total_pf
     acum = 0
      functionality_data_types = FunctionalityDataType.find(:all)
-
      functionality_data_types.each do |functionality_data_type|
      acum += qnt_pf_by_functionality(functionality_data_type.type_of_functionality.name, functionality_data_type.qnt_type_register, functionality_data_type.qnt_type_data)
      end
@@ -69,5 +68,15 @@ module GlobalHelper
     retorno
   end
 
+  def calc_ajustment_factor
+     @projects_general_caracteristics_level_of_influences = ProjectsGeneralCaracteristicsLevelOfInfluence.find_all_by_project_id(@project.id)
+     acum = 0
+     @projects_general_caracteristics_level_of_influences.each do |p|
+     acum += p.level_of_influence.level
+     end
+     vaf = (acum * 0.01) + 0.65
+     dfp = total_pf * vaf
+     dfp
+  end
 end
 

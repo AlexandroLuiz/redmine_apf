@@ -3,27 +3,95 @@
 <%=render "configuration_apf_for_data_types/nav"%>
 <div id="conteudo">
 <h2><%=l :configuration_apf_for_transaction_types%></h2>
+<div id="conf_apf_index">
 <table>
-  <tr>
-    <th><%=t :type%></th>
+<caption>EE</caption>
+<tr><td></td><td colspan=3><strong><%=t :qnt_type_data%></strong></td></tr>
+    <tr>
     <th><%=t :qnt_reference_files%></th>
-    <th><%=t :qnt_type_data%></th>
-    <th><%=t :complexity%></th>
-    <th><%=t :qnt_pf%></th>
-    <th></th>
+ <th><%= @configuration_apf_for_EE[0].type_of_data_min%> - <%=  @configuration_apf_for_EE[0].type_of_data_max%></th>
+    <th><%= @configuration_apf_for_EE[1].type_of_data_min%> - <%=  @configuration_apf_for_EE[1].type_of_data_max%></th>
+    <th><%= @configuration_apf_for_EE[2].type_of_data_min%> - <%=  @configuration_apf_for_EE[2].type_of_data_max%></th>
     </tr>
-
-   <% @configuration_apf_for_transaction_types.each do |conf| %>
-  <tr>
-
-    <td><%= conf.type_of_functionality.name %></td>
-    <td><%= conf.type_of_reference_file_min%> - <%= conf.type_of_reference_file_max%></td>
-    <td><%= conf.type_of_data_min%> - <%=  conf.type_of_data_max%></td>
-    <td><%= conf.complexity%></td>
-    <td><%= conf.pf%></td>
-    <td><%= link_to_edit({:controller => :configuration_apf_for_transaction_types, :action => :edit, :project_id => @project, :id => conf}, :class => 'icon icon-edit')%></td>
+    <tr>
+    <td><strong><%= @configuration_apf_for_EE[0].type_of_reference_file_min%> - <%= @configuration_apf_for_EE[0].type_of_reference_file_max%></strong></td>
+    <td><%= @configuration_apf_for_EE[0].complexity%> - <%= @configuration_apf_for_EE[0].pf%> </td>
+    <td><%= @configuration_apf_for_EE[1].complexity%> - <%= @configuration_apf_for_EE[1].pf%> </td>
+    <td><%= @configuration_apf_for_EE[2].complexity%> - <%= @configuration_apf_for_EE[2].pf%> </td>
   </tr>
-<% end %>
+<tr>
+    <td><strong><%= @configuration_apf_for_EE[3].type_of_reference_file_min%> - <%= @configuration_apf_for_EE[3].type_of_reference_file_max%></strong></td>
+    <td><%= @configuration_apf_for_EE[3].complexity%> - <%= @configuration_apf_for_EE[3].pf%> </td>
+    <td><%= @configuration_apf_for_EE[4].complexity%> - <%= @configuration_apf_for_EE[4].pf%> </td>
+    <td><%= @configuration_apf_for_EE[5].complexity%> - <%= @configuration_apf_for_EE[5].pf%> </td>
+  </tr>
+  <tr>
+    <td><strong><%= @configuration_apf_for_EE[6].type_of_reference_file_min%> - <%= @configuration_apf_for_EE[6].type_of_reference_file_max%></strong></td>
+    <td><%= @configuration_apf_for_EE[6].complexity%> - <%= @configuration_apf_for_EE[6].pf%> </td>
+    <td><%= @configuration_apf_for_EE[7].complexity%> - <%= @configuration_apf_for_EE[7].pf%> </td>
+    <td><%= @configuration_apf_for_EE[8].complexity%> - <%= @configuration_apf_for_EE[8].pf%> </td>
+  </tr>
 </table>
-<div>
+</div>
+<div id="conf_apf_index">
+<table>
+<caption>SE</caption>
+<tr><td></td><td colspan=3><strong><%=t :qnt_type_data%></strong></td></tr>
+    <tr>
+    <th><%=t :qnt_reference_files%></th>
+ <th><%= @configuration_apf_for_SE[0].type_of_data_min%> - <%=  @configuration_apf_for_SE[0].type_of_data_max%></th>
+    <th><%= @configuration_apf_for_SE[1].type_of_data_min%> - <%=  @configuration_apf_for_SE[1].type_of_data_max%></th>
+    <th><%= @configuration_apf_for_SE[2].type_of_data_min%> - <%=  @configuration_apf_for_SE[2].type_of_data_max%></th>
+    </tr>
+    <tr>
+    <td><strong><%= @configuration_apf_for_SE[0].type_of_reference_file_min%> - <%= @configuration_apf_for_SE[0].type_of_reference_file_max%></strong></td>
+    <td><%= @configuration_apf_for_SE[0].complexity%> - <%= @configuration_apf_for_SE[0].pf%> </td>
+    <td><%= @configuration_apf_for_SE[1].complexity%> - <%= @configuration_apf_for_SE[1].pf%> </td>
+    <td><%= @configuration_apf_for_SE[2].complexity%> - <%= @configuration_apf_for_SE[2].pf%> </td>
+  </tr>
+<tr>
+    <td><strong><%= @configuration_apf_for_SE[3].type_of_reference_file_min%> - <%= @configuration_apf_for_SE[3].type_of_reference_file_max%></strong></td>
+    <td><%= @configuration_apf_for_SE[3].complexity%> - <%= @configuration_apf_for_SE[3].pf%> </td>
+    <td><%= @configuration_apf_for_SE[4].complexity%> - <%= @configuration_apf_for_SE[4].pf%> </td>
+    <td><%= @configuration_apf_for_SE[5].complexity%> - <%= @configuration_apf_for_SE[5].pf%> </td>
+  </tr>
+  <tr>
+    <td><strong><%= @configuration_apf_for_SE[6].type_of_reference_file_min%> - <%= @configuration_apf_for_SE[6].type_of_reference_file_max%></strong></td>
+    <td><%= @configuration_apf_for_SE[6].complexity%> - <%= @configuration_apf_for_SE[6].pf%> </td>
+    <td><%= @configuration_apf_for_SE[7].complexity%> - <%= @configuration_apf_for_SE[7].pf%> </td>
+    <td><%= @configuration_apf_for_SE[8].complexity%> - <%= @configuration_apf_for_SE[8].pf%> </td>
+  </tr>
+</table>
+</div>
+<div id="conf_apf_index">
+<table>
+<caption>CE</caption>
+<tr><td></td><td colspan=3><strong><%=t :qnt_type_data%></strong></td></tr>
+    <tr>
+    <th><%=t :qnt_reference_files%></th>
+ <th><%= @configuration_apf_for_CE[0].type_of_data_min%> - <%=  @configuration_apf_for_CE[0].type_of_data_max%></th>
+    <th><%= @configuration_apf_for_CE[1].type_of_data_min%> - <%=  @configuration_apf_for_CE[1].type_of_data_max%></th>
+    <th><%= @configuration_apf_for_CE[2].type_of_data_min%> - <%=  @configuration_apf_for_CE[2].type_of_data_max%></th>
+    </tr>
+    <tr>
+    <td><strong><%= @configuration_apf_for_CE[0].type_of_reference_file_min%> - <%= @configuration_apf_for_CE[0].type_of_reference_file_max%></strong></td>
+    <td><%= @configuration_apf_for_CE[0].complexity%> - <%= @configuration_apf_for_CE[0].pf%> </td>
+    <td><%= @configuration_apf_for_CE[1].complexity%> - <%= @configuration_apf_for_CE[1].pf%> </td>
+    <td><%= @configuration_apf_for_CE[2].complexity%> - <%= @configuration_apf_for_CE[2].pf%> </td>
+  </tr>
+<tr>
+    <td><strong><%= @configuration_apf_for_CE[3].type_of_reference_file_min%> - <%= @configuration_apf_for_CE[3].type_of_reference_file_max%></strong></td>
+    <td><%= @configuration_apf_for_CE[3].complexity%> - <%= @configuration_apf_for_CE[3].pf%> </td>
+    <td><%= @configuration_apf_for_CE[4].complexity%> - <%= @configuration_apf_for_CE[4].pf%> </td>
+    <td><%= @configuration_apf_for_CE[5].complexity%> - <%= @configuration_apf_for_CE[5].pf%> </td>
+  </tr>
+  <tr>
+    <td><strong><%= @configuration_apf_for_CE[6].type_of_reference_file_min%> - <%= @configuration_apf_for_CE[6].type_of_reference_file_max%></strong></td>
+    <td><%= @configuration_apf_for_CE[6].complexity%> - <%= @configuration_apf_for_CE[6].pf%> </td>
+    <td><%= @configuration_apf_for_CE[7].complexity%> - <%= @configuration_apf_for_CE[7].pf%> </td>
+    <td><%= @configuration_apf_for_CE[8].complexity%> - <%= @configuration_apf_for_CE[8].pf%> </td>
+  </tr>
+</table>
+</div>
+</div>
 

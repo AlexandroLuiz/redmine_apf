@@ -1,25 +1,16 @@
 class ConfigurationApfForTransactionTypesController < ApplicationController
   unloadable
-   menu_item :apf
+   menu_item :APF
   before_filter :current_project
-  before_filter :authorize, :only => [:index, :edit]
+  before_filter :authorize, :only => [:index]
 
 
   def index
-     @configuration_apf_for_transaction_types = ConfigurationApfForTransactionType.find_all_by_type_of_functionality_id(3)
-     @configuration_apf_for_transaction_types += ConfigurationApfForTransactionType.find_all_by_type_of_functionality_id(4)
-     @configuration_apf_for_transaction_types += ConfigurationApfForTransactionType.find_all_by_type_of_functionality_id(5)
+     @configuration_apf_for_EE = ConfigurationApfForTransactionType.find_all_by_type_of_functionality_id(3)
+     @configuration_apf_for_SE = ConfigurationApfForTransactionType.find_all_by_type_of_functionality_id(4)
+     @configuration_apf_for_CE = ConfigurationApfForTransactionType.find_all_by_type_of_functionality_id(5)
   end
 
-
-  def edit
-    @configuration_apf_for_transaction_type = ConfigurationApfForTransactionType.find(params[:id])
-  end
-
-
-
-  def update
-  end
 
  private
   def current_project

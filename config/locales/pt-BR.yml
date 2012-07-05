@@ -1,4 +1,5 @@
 pt-BR:
+   project_module_apf: APF
    new_functionality: Nova Funcionalidade
    functionalities: Funcionalidades
    functionality: Funcionalidade
@@ -6,6 +7,7 @@ pt-BR:
    new_functionality_data_type: Nova Funcionalidade Tipo Dado
    edit_functionality_data_type: Editar Funcionalidade Tipo Dado
    edit_functionality_transaction_type: Editar Funcionalidade Tipo Transação
+   edit_configuration_apf_for_data_type: Editar Configurações APF para Funcionalidades do Tipo Dado
 
    adjustment_factor: Fator de Ajuste
    adjustment: Ajustar
@@ -20,7 +22,7 @@ pt-BR:
    field_qnt_type_data: Qnt. Tipos de Dados
    field_type_of_functionality: Tipo de Funcionalidade
    field_level_of_influence: Nível de Influência
-
+   field_complexity: Complexidade
    field_qnt_reference_file: Qnt. Arquivos Refeferenciados
 
    functionalities_data_type: Funcionalidades Tipo Dado
@@ -48,22 +50,24 @@ pt-BR:
 
    tipe_of_function: Tipo de Funcão
    configuration_apf_for_data_types: Configurações para Funcionalidade Tipo Dado
-   configuration_apf_for_transaction_types: Configurações para Funcionalidades Tipo Transação
+   ConfigurationApfForTransactionType: Configurações APF para Funcionalidades Tipo Transação
+   configuration_apf_for_transaction_types: Configurações APF para Funcionalidades Tipo Transação
+   configuration_view: Ver Configurações
 
-   permission_view_configuration_apf_for_data_type: Ver Configurações APF para Funções do Tipo Dado
-   permission_edit_configuration_apf_for_data_type: Editar Configurações APF para Funções do Tipo Dado
-   permission_view_configuration_apf_for_transaction_type: Ver Configurações APF para Funções do Tipo Transação
-   permission_edit_configuration_apf_for_transaction_type: Editar Configurações APF para Funções do Tipo Transação
-   permission_view_functionalitiesaplication_apf: Ver funcionalidades e aplicar APF
-   permission_create_edit_functionality: Criar e editar funcionalidade
-   permission_destroy_functionality: Excluir funcionalidade
-   permission_view_functionalities_and_aplication_apf: Ver funcionalidades e aplicar APF
-   permission_create_and_update_functionality_data_type: Criar e Atualizar Funcionalidade do Tipo Dado
-   permission_view_functionalities_data_type: Ver Funcionalidades do Tipo Dados
-   permission_create_and_update_functionality_transaction_type: Criar e Atualizar Funções do Tipo Transação
-   permission_view_functionalities_transaction_type: Ver Funcionalidades do Tipo Transação
-   permission_destroy_functionalities_transaction_type: Excluir Funcionalidades do Tipo Transação
-   permission_destroy_functionalities_data_type: Excluir Funcionalidades do Tipo Dado
-   permission_configure_adjustment_factor: Configurar Fator de Ajuste
-   permission_view_configuration_adjustment_factor: Ver Configurações de Fator de Ajuste
+   permission_view_configuration_apf_for_data_type: Ver Configurações APF para Funcionalidades do Tipo Dado;
+   permission_edit_configuration_apf_for_data_type: Editar Configurações APF para Funcionalidades do Tipo Dado;
+   permission_view_configuration_apf_for_transaction_type: Ver Configurações APF para Funcionalidades do Tipo Transação;
+   permission_edit_configuration_apf_for_transaction_type: Editar Configurações APF para Funcionalidades do Tipo Transação;
+   permission_view_functionalitiesaplication_apf: Ver funcionalidades e aplicar APF;
+   permission_create_edit_functionality: Criar e editar funcionalidades;
+   permission_destroy_functionality: Excluir funcionalidades;
+   permission_view_functionalities_and_aplication_apf: Ver funcionalidades e aplicar APF;
+   permission_create_and_update_functionality_data_type: Criar e Atualizar Funcionalidades do Tipo Dado;
+   permission_view_functionalities_data_type: Ver Funcionalidades do Tipo Dados;
+   permission_create_and_update_functionality_transaction_type: Criar e Atualizar Funcionalidades do Tipo Transação;
+   permission_view_functionalities_transaction_type: Ver Funcionalidades do Tipo Transação;
+   permission_destroy_functionalities_transaction_type: Excluir Funcionalidades do Tipo Transação;
+   permission_destroy_functionalities_data_type: Excluir Funcionalidades do Tipo Dado;
+   permission_configure_adjustment_factor: Configurar Fator de Ajuste;
+   permission_view_configuration_adjustment_factor: Ver Configurações de Fator de Ajuste;
 

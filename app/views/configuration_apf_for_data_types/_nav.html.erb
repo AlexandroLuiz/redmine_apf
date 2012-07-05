@@ -8,21 +8,27 @@
   <div id="navegacaoLocal">
 
   <div id="navegacaoLocalTotalPF">
+  <table>
+  <tr>
+  <th>   Total de PF(s) não ajustados : </th><th><%=total_pf%></th>
+  </tr>
+   <tr>
+   <th>Total de PF(s) ajustados :</th> <th><%=calc_ajustment_factor%></th>
+   </tr>
 
-   <p>Total de PF não ajustados= <%=total_pf%></p>
-   <p>Total de PF ajustados = <%=calc_ajustment_factor%></p>
+   </table>
   </div>
 
    <div id="navegacaoLocalAPF">
    <h3><%=t :functionalities_data_type%></h3>
    <p><%= link_to_if_authorized(l(:list_all), {:controller => 'functionality_data_types', :action => 'index', :project_id => @project})%> |
-    <%= link_to_if_authorized(l(:configuration), {:controller => 'configuration_apf_for_data_types', :action => 'index', :project_id => @project }, :accesskey => accesskey(:index)) %> |
+    <%= link_to_if_authorized(l(:configuration_view), {:controller => 'configuration_apf_for_data_types', :action => 'index', :project_id => @project }, :accesskey => accesskey(:index)) %> |
    <%=link_to_if_authorized(t(:label_new), {:controller => 'functionality_data_types', :action => 'new', :project_id => @project}) %></p>
    </div>
    <div id="navegacaoLocalAPF">
      <h3><%=t :functionalities_transaction_type%></h3>
      <p><%= link_to_if_authorized(l(:list_all), {:controller => 'functionality_transaction_types', :action => 'index', :project_id => @project})%> |
-    <%= link_to_if_authorized(l(:configuration), {:controller => 'configuration_apf_for_transaction_types', :action => 'index', :project_id => @project }, :accesskey => accesskey(:index)) %> |
+    <%= link_to_if_authorized(l(:configuration_view), {:controller => 'configuration_apf_for_transaction_types', :action => 'index', :project_id => @project }, :accesskey => accesskey(:index)) %> |
    <%=link_to_if_authorized(t(:label_new), {:controller => 'functionality_transaction_types', :action => 'new', :project_id => @project}) %></p>
    </div>
     <div id="navegacaoLocalAPF">

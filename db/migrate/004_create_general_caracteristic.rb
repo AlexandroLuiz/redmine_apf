@@ -16,7 +16,7 @@ def self.up
       t.column :name, :string, :limit => 50, :null => false
     end
 
-    create_table :projects_general_caracteristics_level_of_influences, :id => false, :force => true do |t|
+    create_table :projects_general_caracteristics_level_of_influences, :force => true do |t|
       t.column :project_id, :integer, :null => false
       t.column :general_caracteristic_id, :integer, :null => false
       t.column :level_of_influence_id, :integer, :null => false

@@ -1,0 +1,15 @@
+<%=render "configuration_apf_for_data_types/nav"%>
+<div id="conteudo">
+<h2><%=t("configure_adjustment_factor_for", :factor => @projects_general_caracteristics_level_of_influence.general_caracteristic.name)%></h2>
+
+<% labelled_tabular_form_for :projects_general_caracteristics_level_of_influence, @projects_general_caracteristics_level_of_influence, :url => {:controller => 'projects_general_caracteristics_level_of_influences', :action => 'update'},
+                             :html => {:multipart => true,:method => :put, :id => 'projects_general_caracteristics_level_of_influences-form', :class => 'tabular edit-projects_general_caracteristics_level_of_influences-form'} do |f| %>
+    <%= error_messages_for 'projects_general_caracteristics_level_of_influence' %>
+
+<div id="form">
+<%=render :partial => "form_edit", :locals => {:f => f}%>
+    <%= f.submit l(:button_save)%>
+<% end %>
+</div>
+</div>
+

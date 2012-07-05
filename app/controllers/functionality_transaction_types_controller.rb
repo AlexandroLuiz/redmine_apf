@@ -1,7 +1,7 @@
 class FunctionalityTransactionTypesController < ApplicationController
   unloadable
 
-  menu_item :apf
+  menu_item :APF
   before_filter :current_project
   before_filter :authorize, :only => [:index, :show, :edit, :new, :destroy]
 
@@ -35,7 +35,7 @@ class FunctionalityTransactionTypesController < ApplicationController
 
     respond_to do |format|
       if @functionality_transaction_type.save
-        format.html { redirect_to(project_functionality_transaction_types_url, :notice => 'Functionality created.') }
+        format.html { redirect_to(project_functionality_transaction_types_url, :notice => l(:notice_successful_create)) }
       else
         format.html { render :action => "new" }
       end

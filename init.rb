@@ -1,7 +1,7 @@
 require 'redmine'
 
-Redmine::Plugin.register :redmine_apf do
-  name 'Apf plugin'
+Redmine::Plugin.register :redmine_APF do
+  name 'APF plugin'
   author 'Alexandro Luiz Hilleshein'
   description 'This is a plugin for Redmine for aplication of APF on software projects'
   version '0.0.1'
@@ -21,7 +21,7 @@ Redmine::Plugin.register :redmine_apf do
    permission :destroy_functionalities_transaction_type, :functionality_transaction_types => :destroy
    permission :view_configuration_adjustment_factor, :projects_general_caracteristics_level_of_influences => [:index]
    permission :configure_adjustment_factor, :projects_general_caracteristics_level_of_influences => [:new, :edit]
-   menu :project_menu, :apf, { :controller => 'functionality_data_types', :action => 'index' }, :caption => 'APF', :after => :activity, :param => :project_id
+   menu :project_menu, :APF, { :controller => 'functionality_data_types', :action => 'index' }, :caption => 'APF', :after => :activity, :param => :project_id
    end
 end
 
