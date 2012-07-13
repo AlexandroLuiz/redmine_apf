@@ -6,7 +6,7 @@ class FunctionalityDataTypesController < ApplicationController
   before_filter :authorize, :only => [:index, :show, :edit, :new, :destroy]
 
   def index
-    @functionality_data_types = FunctionalityDataType.find(:all)
+    @functionality_data_types = FunctionalityDataType.find_all_by_project_id(:project_id)
     @functionality_data_type_count = @functionality_data_types.size
     @functionality_data_type_pages = Paginator.new self, @functionality_data_type_count, per_page_option, params['page']
     respond_to do |format|
