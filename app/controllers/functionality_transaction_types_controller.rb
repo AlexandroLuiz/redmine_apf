@@ -6,7 +6,7 @@ class FunctionalityTransactionTypesController < ApplicationController
   before_filter :authorize, :only => [:index, :show, :edit, :new, :destroy]
 
   def index
-    @functionality_transaction_types = FunctionalityTransactionType.find_all_by_project_id(:project_id)
+    @functionality_transaction_types = FunctionalityTransactionType.find_all_by_project_id(@project.id)
     @functionality_transaction_type_count = @functionality_transaction_types.size
     @functionality_transaction_type_pages = Paginator.new self, @functionality_transaction_type_count, per_page_option, params['page']
   end
