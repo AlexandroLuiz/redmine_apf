@@ -14,12 +14,12 @@ module GlobalHelper
 
   def total_pf
     acum = 0
-     functionality_data_types = FunctionalityDataType.find_all_by_project_id(:project_id)
+     functionality_data_types = FunctionalityDataType.find_all_by_project_id(@project.id)
      functionality_data_types.each do |functionality_data_type|
      acum += qnt_pf_by_functionality(functionality_data_type.type_of_functionality.name, functionality_data_type.qnt_type_register, functionality_data_type.qnt_type_data)
      end
 
-     functionality_transaction_types = FunctionalityTransactionType.find_all_by_project_id(:project_id)
+     functionality_transaction_types = FunctionalityTransactionType.find_all_by_project_id(@project.id)
      functionality_transaction_types.each do |functionality_transaction_type|
       acum += qnt_pf_by_functionality(functionality_transaction_type.type_of_functionality.name, functionality_transaction_type.qnt_reference_file, functionality_transaction_type.qnt_type_data)
     end
